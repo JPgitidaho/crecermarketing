@@ -39,6 +39,13 @@ function Footer() {
       <div className="relative mx-auto max-w-6xl">
         <div className="grid gap-8 rounded-[36px] border border-white/10 bg-white/5 p-8 shadow-[0_24px_80px_rgba(2,6,23,0.45)] backdrop-blur md:grid-cols-[1.2fr_0.8fr] md:p-10">
           <div>
+            <img
+              src="/assets/logo-crecer-256.png"
+              alt="Logo de Crecer Marketing"
+              className="mb-5 h-20 w-20 object-contain"
+              width="256"
+              height="256"
+            />
             <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
               Crecer Marketing
             </span>

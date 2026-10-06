@@ -54,9 +54,11 @@ function Navbar() {
         >
           <span className={`flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border ${isSolid ? "border-slate-200 bg-slate-50" : "border-white/15 bg-white/10"}`}>
             <img
-              src="/assets/logo_master.svg"
+              src="/assets/logo-crecer-256.png"
               alt="Logo de Crecer Marketing"
-              className="h-8 w-8 object-contain"
+              className="h-9 w-9 object-contain"
+              width="256"
+              height="256"
             />
           </span>
           Crecer Marketing

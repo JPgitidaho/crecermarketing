@@ -1,8 +1,8 @@
 const logos = [
-  "/assets/CRECERMARKETINGLOGO.png",
-"/assets/CRECERMARKETINGLOGO.png",
-"/assets/CRECERMARKETINGLOGO.png",
-"/assets/CRECERMARKETINGLOGO.png",
+  "/assets/logo-crecer-256.png",
+  "/assets/logo-crecer-256.png",
+  "/assets/logo-crecer-256.png",
+  "/assets/logo-crecer-256.png",
 
 ]
 
