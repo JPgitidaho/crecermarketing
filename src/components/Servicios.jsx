@@ -1,11 +1,13 @@
 import FadeInSection from "./FadeInSection"
 import { Briefcase, BarChart3, Layout, Code } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const items = [
   {
     icon: <Briefcase className="w-10 h-10 text-[#0f766e]" />,
     title: "Desarrollo web para empresas",
-    desc: "Creamos páginas web profesionales para presentar tus servicios con claridad y facilitar que tus clientes encuentren cómo contactarte."
+    desc: "Creamos páginas web profesionales para presentar tus servicios con claridad y facilitar que tus clientes encuentren cómo contactarte.",
+    href: "/desarrollo-web-rancagua",
   },
   {
     icon: <BarChart3 className="w-10 h-10 text-[#0f766e]" />,
@@ -45,7 +47,15 @@ function Services() {
           <FadeInSection delay={0.1 * i} key={i}>
             <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#99f6e4] hover:shadow-xl">
               <div>{item.icon}</div>
-              <h3 className="mt-4 text-2xl font-bold">{item.title}</h3>
+              <h3 className="mt-4 text-2xl font-bold">
+                {item.href ? (
+                  <Link to={item.href} className="hover:text-[#0f766e]">
+                    {item.title}
+                  </Link>
+                ) : (
+                  item.title
+                )}
+              </h3>
               <p className="mt-2 text-gray-600">{item.desc}</p>
             </div>
           </FadeInSection>
