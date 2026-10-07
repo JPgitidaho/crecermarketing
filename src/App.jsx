@@ -2,8 +2,6 @@ import SEOTags from "./components/SEOTags"
 import Hero from "./components/Hero"
 import Servicios from "./components/Servicios"
 import Proyectos from "./components/Proyectos"
-import CTA from "./components/CTA"
-import ClientesTestimonios from "./components/ClientesTestimonios"
 import Contacto from "./components/Contacto"
 import Footer from "./components/Footer"
 import { Toaster } from "react-hot-toast"
@@ -14,6 +12,9 @@ import BlogPost from "./pages/BlogPost"
 import Analytics from "./components/Analytics"
 import Navbar from "./components/Navbar"
 import About from "./components/About"
+import Proceso from "./components/Proceso"
+import EnfoqueLocal from "./components/EnfoqueLocal"
+import PreguntasFrecuentes from "./components/PreguntasFrecuentes"
 import WhatsAppButton from "./components/WhatsAppButton"
 import ScrollToHash from "./components/ScrollToHash"
 import { SITE_URL } from "./config/site"
@@ -24,16 +25,17 @@ function Home() {
     <>
       <SEOTags
         title="Crecer Marketing | Desarrollo Web y SEO en Rancagua"
-        description="Desarrollo web, SEO y estrategias digitales que generan resultados. Sitios modernos, rápidos y optimizados desde Rancagua para todo Chile."
+        description="Desarrollo web profesional para empresas y pymes en Rancagua y O’Higgins, con SEO integrado desde la estructura. Atención en todo Chile."
         canonical={`${SITE_URL}/`}
       />
       <Navbar />
       <Hero />
-      <About />
       <Servicios />
+      <EnfoqueLocal />
+      <About />
+      <Proceso />
       <Proyectos />
-      <CTA />
-      <ClientesTestimonios />
+      <PreguntasFrecuentes />
       <Contacto />
       <Footer />
     </>

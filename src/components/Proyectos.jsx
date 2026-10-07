@@ -27,14 +27,13 @@ export default function Proyectos() {
     <section id="proyectos" className="py-28 px-6 bg-white text-[#1a1a1f]">
       <FadeInSection>
         <h2 className="text-4xl md:text-5xl font-extrabold text-center">
-          Algunos proyectos desarrollados
+          Proyectos web y soluciones digitales
         </h2>
       </FadeInSection>
 
       <FadeInSection delay={0.15}>
         <p className="mt-4 text-center text-lg max-w-3xl mx-auto text-gray-600">
-          Ejemplos de soluciones web creadas para mejorar la presencia digital,
-          comunicar mejor un negocio y ofrecer experiencias digitales claras.
+          Una selección de proyectos existentes de comercio electrónico, sitios corporativos y herramientas internas.
         </p>
       </FadeInSection>
 

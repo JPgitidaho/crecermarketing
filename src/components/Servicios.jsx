@@ -4,23 +4,23 @@ import { Briefcase, BarChart3, Layout, Code } from "lucide-react"
 const items = [
   {
     icon: <Briefcase className="w-10 h-10 text-[#0f766e]" />,
-    title: "Sitio Web Profesional para Negocios",
-    desc: "Diseño y desarrollo de sitios web claros, rápidos y bien estructurados para que tu negocio transmita confianza y explique mejor lo que ofrece."
-  },
-  {
-    icon: <Layout className="w-10 h-10 text-[#0f766e]" />,
-    title: "Landing Pages para Captar Clientes",
-    desc: "Páginas enfocadas en convertir visitantes en contactos o ventas. Ideales para campañas, servicios específicos o lanzamientos."
+    title: "Desarrollo web para empresas",
+    desc: "Creamos páginas web profesionales para presentar tus servicios con claridad y facilitar que tus clientes encuentren cómo contactarte."
   },
   {
     icon: <BarChart3 className="w-10 h-10 text-[#0f766e]" />,
-    title: "Rediseño Web Estratégico",
-    desc: "Si tu sitio actual se ve antiguo o no comunica bien tu negocio, lo reorganizo y rediseño para que sea claro, moderno y efectivo."
+    title: "SEO y posicionamiento web",
+    desc: "Revisamos la estructura y el contenido para que los buscadores entiendan cada página. Para empresas de la zona, consideramos búsquedas locales en Rancagua."
   },
   {
     icon: <Code className="w-10 h-10 text-[#0f766e]" />,
-    title: "Auditoría Web Inicial",
-    desc: "Análisis de tu sitio web para detectar problemas de estructura, mensaje o presencia digital, con recomendaciones claras de mejora."
+    title: "Auditoría web",
+    desc: "Revisamos tu sitio para detectar problemas de contenido, estructura y experiencia, y priorizamos mejoras concretas según tu negocio."
+  },
+  {
+    icon: <Layout className="w-10 h-10 text-[#0f766e]" />,
+    title: "Soluciones digitales para empresas",
+    desc: "Desarrollamos herramientas y mejoras web ajustadas a una necesidad concreta, como organizar información o simplificar una tarea del negocio."
   }
 ]
 
@@ -30,13 +30,13 @@ function Services() {
       
       <FadeInSection>
         <h2 className="text-4xl md:text-5xl font-extrabold text-center">
-          Soluciones Web para Negocios
+          Servicios web para empresas y pymes
         </h2>
       </FadeInSection>
 
       <FadeInSection delay={0.2}>
         <p className="mt-4 text-center text-lg max-w-3xl mx-auto text-gray-600">
-          Desarrollo de sitios web profesionales pensados para transmitir confianza, explicar claramente tu negocio y ayudarte a atraer más clientes.
+          Desarrollo web como servicio principal, acompañado de SEO, auditoría y soluciones digitales según las necesidades de cada empresa.
         </p>
       </FadeInSection>
 

@@ -19,15 +19,13 @@ export default function About() {
         <div>
           <FadeInSection>
             <h2 className="text-4xl md:text-5xl font-extrabold">
-              Desarrollo sitios web pensados para dar una imagen profesional y generar confianza
+              Soluciones claras, adaptadas a la realidad de cada empresa
             </h2>
           </FadeInSection>
 
           <FadeInSection delay={0.15}>
             <p className="mt-6 text-lg text-gray-700 max-w-xl">
-              Ayudo a negocios y empresas a tener una presencia digital clara, moderna y estratégica.
-              Mi enfoque combina diseño, estructura y desarrollo web para que tu sitio no solo se vea bien,
-              sino que también comunique mejor lo que haces y te ayude a atraer clientes.
+              En Crecer Marketing trabajamos el desarrollo web y el SEO como partes de una misma presencia digital. Cada proyecto parte por entender el negocio y definir una solución útil, con acompañamiento directo y explicaciones sencillas durante el proceso.
             </p>
           </FadeInSection>
 
@@ -39,7 +37,7 @@ export default function About() {
                   <div>
                     <div className="text-sm text-gray-500">Enfoque</div>
                     <div className="font-semibold">
-                      Sitios web claros, profesionales y estratégicos
+                      Una web profesional que presenta tu negocio con claridad
                     </div>
                   </div>
                 </div>
@@ -53,7 +51,7 @@ export default function About() {
                   <div>
                     <div className="text-sm text-gray-500">Objetivo</div>
                     <div className="font-semibold">
-                      Transmitir confianza y ayudarte a captar clientes
+                      SEO considerado desde la estructura del sitio
                     </div>
                   </div>
                 </div>
@@ -61,22 +59,6 @@ export default function About() {
             </FadeInSection>
           </div>
 
-          <FadeInSection delay={0.4}>
-            <div className="mt-8 flex gap-4 flex-wrap">
-              <a
-                href="#proyectos"
-                className="rounded-xl bg-[#0f766e] px-6 py-3 font-semibold text-white transition hover:bg-[#115e59]"
-              >
-                Ver proyectos
-              </a>
-              <a
-                href="#contacto"
-                className="px-6 py-3 rounded-xl border border-gray-300 font-semibold text-gray-800 hover:bg-gray-100 transition"
-              >
-                Solicitar diagnóstico
-              </a>
-            </div>
-          </FadeInSection>
         </div>
       </div>
     </section>

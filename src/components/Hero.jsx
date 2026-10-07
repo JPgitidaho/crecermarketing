@@ -21,18 +21,14 @@ function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
-        className="relative z-10 max-w-4xl mx-auto rounded-3xl border border-white/10 bg-white/5 p-10 text-center shadow-2xl backdrop-blur-xl md:p-16"
+        className="relative z-10 max-w-4xl mx-auto rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-2xl backdrop-blur-xl md:p-16"
       >
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
-          Sitios Web Profesionales
-          <span className="mt-2 block text-[#67e8f9]">
-            para negocios que necesitan crecer y verse serios.
-          </span>
+          Desarrollo web profesional para empresas en Rancagua
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-gray-200">
-          Desarrollo sitios web claros, rápidos y estratégicos que ayudan a tu negocio
-          a transmitir confianza, explicar mejor lo que haces y convertir visitantes en clientes.
+          Creamos páginas web para empresas y pymes de la Región de O’Higgins, con SEO integrado desde su estructura. Trabajamos también con clientes de todo Chile.
         </p>
 
         <motion.div
