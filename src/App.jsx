@@ -13,7 +13,6 @@ import Analytics from "./components/Analytics"
 import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Proceso from "./components/Proceso"
-import EnfoqueLocal from "./components/EnfoqueLocal"
 import PreguntasFrecuentes from "./components/PreguntasFrecuentes"
 import WhatsAppButton from "./components/WhatsAppButton"
 import ScrollToHash from "./components/ScrollToHash"
@@ -32,7 +31,6 @@ function Home() {
       <Navbar />
       <Hero />
       <Servicios />
-      <EnfoqueLocal />
       <About />
       <Proceso />
       <Proyectos />

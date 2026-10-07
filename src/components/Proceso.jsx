@@ -3,23 +3,23 @@ import FadeInSection from "./FadeInSection"
 const pasos = [
   {
     titulo: "Diagnóstico",
-    desc: "Conversamos sobre tu empresa, tus objetivos y la situación actual de tu sitio."
+    desc: "Entendemos tu negocio y lo que necesitas resolver."
   },
   {
     titulo: "Propuesta",
-    desc: "Definimos el alcance, las prioridades y una estructura adecuada para el proyecto."
+    desc: "Acordamos prioridades, alcance y próximos pasos."
   },
   {
     titulo: "Desarrollo",
-    desc: "Construimos la web y organizamos sus páginas para presentar tus servicios con claridad."
+    desc: "Desarrollamos la solución según lo acordado."
   },
   {
     titulo: "Optimización",
-    desc: "Revisamos la experiencia, la estructura y los elementos SEO definidos para el sitio."
+    desc: "Revisamos el proyecto y hacemos los ajustes definidos."
   },
   {
-    titulo: "Entrega y seguimiento",
-    desc: "Publicamos el proyecto y acompañamos los primeros pasos para resolver dudas iniciales."
+    titulo: "Entrega",
+    desc: "Entregamos el trabajo y aclaramos las dudas iniciales."
   }
 ]
 
@@ -35,7 +35,7 @@ export default function Proceso() {
 
       <FadeInSection delay={0.15}>
         <p className="mt-4 text-center text-lg max-w-3xl mx-auto text-gray-600">
-          Te acompañamos desde el diagnóstico hasta la entrega, con etapas claras y decisiones explicadas sin tecnicismos innecesarios.
+          Un recorrido simple para avanzar desde la primera conversación hasta la entrega.
         </p>
       </FadeInSection>
 

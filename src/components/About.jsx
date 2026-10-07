@@ -19,13 +19,13 @@ export default function About() {
         <div>
           <FadeInSection>
             <h2 className="text-4xl md:text-5xl font-extrabold">
-              Soluciones claras, adaptadas a la realidad de cada empresa
+              Por qué Crecer Marketing
             </h2>
           </FadeInSection>
 
           <FadeInSection delay={0.15}>
             <p className="mt-6 text-lg text-gray-700 max-w-xl">
-              En Crecer Marketing trabajamos el desarrollo web y el SEO como partes de una misma presencia digital. Cada proyecto parte por entender el negocio y definir una solución útil, con acompañamiento directo y explicaciones sencillas durante el proceso.
+              Trabajamos con claridad, criterio profesional y comunicación simple. Cada solución se adapta a las prioridades de tu empresa, con acompañamiento durante el proyecto y sin tecnicismos innecesarios.
             </p>
           </FadeInSection>
 
@@ -37,7 +37,7 @@ export default function About() {
                   <div>
                     <div className="text-sm text-gray-500">Enfoque</div>
                     <div className="font-semibold">
-                      Una web profesional que presenta tu negocio con claridad
+                      Soluciones adaptadas a cada negocio
                     </div>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ export default function About() {
                   <div>
                     <div className="text-sm text-gray-500">Objetivo</div>
                     <div className="font-semibold">
-                      SEO considerado desde la estructura del sitio
+                      Comunicación clara y acompañamiento
                     </div>
                   </div>
                 </div>

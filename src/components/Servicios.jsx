@@ -5,24 +5,27 @@ import { Link } from "react-router-dom"
 const items = [
   {
     icon: <Briefcase className="w-10 h-10 text-[#0f766e]" />,
-    title: "Desarrollo web para empresas",
-    desc: "Creamos páginas web profesionales para presentar tus servicios con claridad y facilitar que tus clientes encuentren cómo contactarte.",
+    title: "Desarrollo web",
+    desc: "Una web profesional para explicar tus servicios y facilitar el contacto.",
     href: "/desarrollo-web-rancagua",
   },
   {
     icon: <BarChart3 className="w-10 h-10 text-[#0f766e]" />,
-    title: "SEO y posicionamiento web",
-    desc: "Revisamos la estructura y el contenido para que los buscadores entiendan cada página. Para empresas de la zona, consideramos búsquedas locales en Rancagua."
+    title: "SEO local",
+    desc: "Una estructura clara ayuda a que los buscadores comprendan tu sitio y su contexto local.",
+    href: "/seo-rancagua",
   },
   {
     icon: <Code className="w-10 h-10 text-[#0f766e]" />,
     title: "Auditoría web",
-    desc: "Revisamos tu sitio para detectar problemas de contenido, estructura y experiencia, y priorizamos mejoras concretas según tu negocio."
+    desc: "Detectamos qué puede estar dificultando la navegación o comprensión de tu sitio.",
+    href: "/auditoria-web-rancagua",
   },
   {
     icon: <Layout className="w-10 h-10 text-[#0f766e]" />,
-    title: "Soluciones digitales para empresas",
-    desc: "Desarrollamos herramientas y mejoras web ajustadas a una necesidad concreta, como organizar información o simplificar una tarea del negocio."
+    title: "Soluciones digitales",
+    desc: "Mejoras y herramientas web pensadas para necesidades concretas de tu negocio.",
+    href: "/soluciones",
   }
 ]
 
@@ -38,7 +41,7 @@ function Services() {
 
       <FadeInSection delay={0.2}>
         <p className="mt-4 text-center text-lg max-w-3xl mx-auto text-gray-600">
-          Desarrollo web como servicio principal, acompañado de SEO, auditoría y soluciones digitales según las necesidades de cada empresa.
+          Conoce las áreas principales en las que podemos apoyar a tu empresa.
         </p>
       </FadeInSection>
 
@@ -57,6 +60,13 @@ function Services() {
                 )}
               </h3>
               <p className="mt-2 text-gray-600">{item.desc}</p>
+              <Link
+                to={item.href}
+                className="mt-5 inline-flex font-semibold text-[#0f766e] underline-offset-4 hover:underline"
+                aria-label={`Ver servicio: ${item.title}`}
+              >
+                Ver servicio
+              </Link>
             </div>
           </FadeInSection>
         ))}

@@ -1,20 +1,30 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { Link, useLocation } from "react-router-dom"
-import { Menu, X } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 
 const navItems = [
-  { label: "Servicios", to: "/#servicios" },
-  { label: "Enfoque", to: "/#about" },
   { label: "Proyectos", to: "/#proyectos" },
   { label: "Blog", to: "/blog" },
   { label: "Contacto", to: "/#contacto" },
+]
+
+const serviceItems = [
+  { label: "Desarrollo web", to: "/desarrollo-web-rancagua" },
+  { label: "SEO local", to: "/seo-rancagua" },
+  { label: "Auditoría web", to: "/auditoria-web-rancagua" },
+  { label: "Soluciones digitales", to: "/soluciones" },
 ]
 
 function Navbar() {
   const { pathname } = useLocation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const servicesDropdownRef = useRef(null)
+  const servicesButtonRef = useRef(null)
+  const mobileServicesButtonRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -25,7 +35,20 @@ function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false)
+    setServicesOpen(false)
+    setMobileServicesOpen(false)
   }, [pathname])
+
+  useEffect(() => {
+    const closeOnOutsidePointer = (event) => {
+      if (!servicesDropdownRef.current?.contains(event.target)) {
+        setServicesOpen(false)
+      }
+    }
+
+    document.addEventListener("pointerdown", closeOnOutsidePointer)
+    return () => document.removeEventListener("pointerdown", closeOnOutsidePointer)
+  }, [])
 
   const isHome = pathname === "/"
   const isSolid = !isHome || scrolled || mobileOpen
@@ -36,10 +59,6 @@ function Navbar() {
   const mutedTextClasses = isSolid
     ? "text-slate-700 hover:text-[#0f766e]"
     : "text-white/90 hover:text-[#67e8f9]"
-  const buttonClasses = isSolid
-    ? "bg-[#0f766e] text-white hover:bg-[#115e59]"
-    : "bg-white text-[#0f172a] hover:bg-[#67e8f9]"
-
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
@@ -65,11 +84,58 @@ function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
+          <Link
+            to="/"
+            className={`text-sm font-semibold transition ${pathname === "/" ? "text-[#0f766e]" : mutedTextClasses}`}
+          >
+            Inicio
+          </Link>
+          <div className="relative" ref={servicesDropdownRef}>
+            <button
+              ref={servicesButtonRef}
+              type="button"
+              aria-expanded={servicesOpen}
+              aria-controls="desktop-services-menu"
+              onClick={() => setServicesOpen((open) => !open)}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  setServicesOpen(false)
+                }
+              }}
+              className={`inline-flex items-center gap-1 text-sm font-semibold transition ${mutedTextClasses}`}
+            >
+              Servicios
+              <ChevronDown size={16} className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+            </button>
+            {servicesOpen ? (
+              <div
+                id="desktop-services-menu"
+                className="absolute left-0 top-full z-50 mt-3 w-60 rounded-xl border border-gray-200 bg-white p-2 shadow-xl"
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    setServicesOpen(false)
+                    servicesButtonRef.current?.focus()
+                  }
+                }}
+              >
+                {serviceItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setServicesOpen(false)}
+                    className="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-50 hover:text-[#0f766e] focus:bg-slate-50 focus:text-[#0f766e] focus:outline-none"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
           {navItems.map((item) => {
             const isActive =
               item.to === "/blog"
                 ? pathname.startsWith("/blog")
-                : item.to === pathname
+                : false
 
             return (
               <Link
@@ -84,13 +150,6 @@ function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link
-            to="/#contacto"
-            className={`hidden rounded-2xl px-5 py-2 text-sm font-semibold transition md:inline-flex ${buttonClasses}`}
-          >
-            Solicitar diagnostico
-          </Link>
-
           <button
             type="button"
             aria-label={mobileOpen ? "Cerrar menu" : "Abrir menu"}
@@ -104,21 +163,64 @@ function Navbar() {
 
       {mobileOpen ? (
         <div className="mt-4 space-y-2 border-t border-gray-200 pt-4 md:hidden">
+          <Link
+            to="/"
+            onClick={() => setMobileOpen(false)}
+            className="block rounded-2xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+          >
+            Inicio
+          </Link>
+          <div>
+            <button
+              ref={mobileServicesButtonRef}
+              type="button"
+              aria-expanded={mobileServicesOpen}
+              aria-controls="mobile-services-menu"
+              onClick={() => setMobileServicesOpen((open) => !open)}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  setMobileServicesOpen(false)
+                }
+              }}
+              className="flex w-full items-center justify-between rounded-2xl bg-slate-50 px-4 py-3 text-left text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+            >
+              Servicios
+              <ChevronDown size={16} className={`transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} />
+            </button>
+            {mobileServicesOpen ? (
+              <div
+                id="mobile-services-menu"
+                className="mt-2 space-y-1 pl-4"
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    setMobileServicesOpen(false)
+                    mobileServicesButtonRef.current?.focus()
+                  }
+                }}
+              >
+                {serviceItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMobileOpen(false)}
+                    className="block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-[#0f766e] focus:bg-slate-100 focus:text-[#0f766e] focus:outline-none"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
           {navItems.map((item) => (
             <Link
               key={item.label}
               to={item.to}
+              onClick={() => setMobileOpen(false)}
               className="block rounded-2xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/#contacto"
-            className="block rounded-2xl bg-[#0f766e] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#115e59]"
-          >
-            Solicitar diagnostico
-          </Link>
         </div>
       ) : null}
     </motion.nav>

@@ -24,11 +24,11 @@ function Hero() {
         className="relative z-10 max-w-4xl mx-auto rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-2xl backdrop-blur-xl md:p-16"
       >
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
-          Desarrollo web profesional para empresas en Rancagua
+          Desarrollo web para empresas de Rancagua y la Región de O’Higgins
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-gray-200">
-          Creamos páginas web para empresas y pymes de la Región de O’Higgins, con SEO integrado desde su estructura. Trabajamos también con clientes de todo Chile.
+          Crecer Marketing desarrolla sitios profesionales para empresas y pymes, y considera el SEO como parte de una presencia digital bien estructurada. También trabajamos con clientes de otras zonas de Chile.
         </p>
 
         <motion.div

@@ -2,29 +2,29 @@ import FadeInSection from "./FadeInSection"
 
 const preguntas = [
   {
-    pregunta: "¿Cuánto demora desarrollar una página web?",
+    pregunta: "¿Qué servicios ofrece Crecer Marketing?",
     respuesta:
-      "El plazo depende del alcance, la cantidad de páginas y la disponibilidad del contenido. Se acuerda una estimación para cada proyecto antes de comenzar.",
-  },
-  {
-    pregunta: "¿Qué información necesito entregar?",
-    respuesta:
-      "Ayuda contar con una descripción de la empresa y sus servicios, datos de contacto, logo e imágenes disponibles. Si falta material, definimos juntos qué se necesita preparar.",
+      "Desarrollo web, SEO local, auditoría web y soluciones digitales para empresas y pymes.",
   },
   {
     pregunta: "¿Trabajan solo en Rancagua?",
     respuesta:
-      "La atención local se enfoca en Rancagua y la Región de O’Higgins, y también trabajamos a distancia con empresas de otras zonas de Chile.",
+      "Atendemos empresas de Rancagua y la Región de O’Higgins, además de proyectos de otras zonas de Chile.",
   },
   {
-    pregunta: "¿Qué incluye el SEO inicial?",
+    pregunta: "¿Cómo comienza un proyecto?",
     respuesta:
-      "Considera ordenar la estructura del sitio y sus páginas, junto con elementos básicos como títulos y descripciones para buscadores. El alcance se define según el proyecto.",
+      "Comenzamos con un diagnóstico para entender tus objetivos y definir una propuesta de trabajo.",
   },
   {
-    pregunta: "¿Pueden mejorar una página web existente?",
+    pregunta: "¿Pueden ayudarme si ya tengo una página web?",
     respuesta:
-      "Sí. Primero revisamos el sitio actual y sus necesidades para definir si conviene optimizarlo, reorganizarlo o rediseñarlo.",
+      "Sí. Podemos revisar tu sitio y conversar sobre las mejoras o soluciones que podrían ser útiles.",
+  },
+  {
+    pregunta: "¿Qué necesito para solicitar un diagnóstico?",
+    respuesta:
+      "Cuéntanos brevemente sobre tu empresa, qué necesitas y cómo podemos contactarte. Con eso iniciamos la conversación.",
   },
 ]
 
